@@ -37,20 +37,22 @@ export const Slider = () => {
       className="slider"
     >
       <CarouselContent className="-ml-0 slider__single">
-        {data.results.map((el: ICard) => (
-          <CarouselItem
-            key={el.id}
-            className="pl-0 slider__single"
-            style={{ backgroundImage: createURL(el.backdrop_path!) }}
-          >
-            <div className="slider__single-main">
-              <p className="slider__single-main-title">
-                {el.name ?? el.title ?? ""}
-              </p>
-            </div>
-            <Link href={`/films/${el.id}`} className="slider__single-link"/>
-          </CarouselItem>
-        ))}
+        {data.results
+          .filter((el: ICard) => el.backdrop_path)
+          .map((el: ICard) => (
+            <CarouselItem
+              key={el.id}
+              className="pl-0 slider__single"
+              style={{ backgroundImage: createURL(el.backdrop_path!) }}
+            >
+              <div className="slider__single-main">
+                <p className="slider__single-main-title">
+                  {el.name ?? el.title ?? ""}
+                </p>
+              </div>
+              <Link href={`/films/${el.id}`} className="slider__single-link" />
+            </CarouselItem>
+          ))}
       </CarouselContent>
 
       <CarouselPrevious className="slider__single-prev" />
