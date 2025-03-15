@@ -1,0 +1,45 @@
+$color-primary: var(--main-color);
+$color-secondary: #f5f1ed;
+
+.loader {
+  max-width: 56px;
+  margin-inline: auto;
+
+  &__text {
+    margin: 5px auto;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &__filmstrip {
+    position: relative;
+    width: 56px;
+    height: 70px;
+    background: $color-primary;
+    overflow: hidden;
+    // z-index: -1;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: 120%;
+      border-left: 5px dashed $color-secondary;
+      animation: roll 150ms infinite;
+    }
+    &:before {
+      left: 5px;
+    }
+    &:after {
+      right: 5px;
+    }
+  }
+}
+
+@keyframes roll {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -15px;
+  }
+}

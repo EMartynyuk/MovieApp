@@ -1,0 +1,44 @@
+:root {
+  // fonts
+  // --font-family: "Poppins", sans-serif;
+
+  //container
+  --content-width: 1410px;
+  --container-padding: 15px;
+  --container-width: calc(
+    var(--content-width) + (var(--container-padding) * 1)
+  );
+
+  // colors
+  --main-color: #39b7b3;
+  --dark-main-color: #2c6866;
+}
+
+%btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%input-reset {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+%bg {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%text-reset {
+  margin: 0;
+}

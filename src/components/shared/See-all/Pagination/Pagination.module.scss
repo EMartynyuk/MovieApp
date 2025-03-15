@@ -1,0 +1,20 @@
+.pagination {
+  padding-bottom: 25px;
+  // width: 100%;
+  // justify-content: center;
+}
+
+.paginationItem {
+  color: #fff;
+
+  a {
+    &:hover {
+      color: #fff;
+      background-color: var(--main-color);
+    }
+  }
+}
+
+.paginationArrow {
+  padding: 10px;
+}

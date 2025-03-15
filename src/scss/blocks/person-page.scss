@@ -1,0 +1,75 @@
+.person {
+  margin-bottom: 15px;
+
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  &__media {
+    position: sticky;
+    top: 135px;
+    flex: 0 0 250px;
+
+    @media (max-width: 992px) {
+      top: 70px;
+    }
+
+    @media (max-width: 768px) {
+      flex: 0 0 150px;
+    }
+
+    @media (max-width: 576px) {
+      flex: 0 0 auto;
+      position: static;
+      margin-inline: auto;
+
+      img {
+        max-width: 170px;
+      }
+    }
+  }
+
+  &__top-content {
+    flex: 1;
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 23px;
+    color: var(--main-color);
+
+    @media (max-width: 992px) {
+      font-size: 18px;
+    }
+  }
+
+  &__birthday {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 21px;
+    color: #e8e8e8;
+
+    @media (max-width: 992px) {
+      font-size: 17px;
+    }
+  }
+
+  &__description {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: #e8e8e8;
+
+    @media (max-width: 992px) {
+      font-size: 16px;
+    }
+  }
+}

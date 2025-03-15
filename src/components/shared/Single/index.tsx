@@ -1,0 +1,13 @@
+export { AdditionalOpt } from "./AdditionalOpt";
+export { Author } from "./Author";
+export { Description } from "./Description";
+export { Genres } from "./Genres";
+export { MainInformation } from "./MainInformation";
+export { ModalPopup } from "./ModalPopup";
+export { SingleWrapper } from "./SingleWrapper";
+export { Stars } from "./Stars";
+export { Trailer } from "./Trailer";
+export { Watch } from "./Watch";
+export { Controls } from "./Controls";
+export { SharedBtn } from "./SharedBtn";
+export { ControlBtn } from "./ControlBtn";
