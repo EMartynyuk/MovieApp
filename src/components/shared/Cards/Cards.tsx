@@ -25,7 +25,7 @@ export const Cards = ({ title, query, hiddenMore }: ICards) => {
   }
 
   if (error) {
-    return <p>Ошибка</p>;
+    return <p className="error">Ошибка</p>;
   }
 
   if (title === "Фильмы" || title === "Сериалы") {

@@ -38,7 +38,7 @@ export const SingleWrapper = ({ type }: { type: string }) => {
   }
 
   if (singleError || singleCreditsError || singleTrailerError) {
-    return <p>Ошибка</p>;
+    return <p className="error">Ошибка</p>;
   }
 
   return (

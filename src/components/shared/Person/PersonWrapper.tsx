@@ -14,7 +14,7 @@ export const PersonWrapper = () => {
   }
 
   if (error) {
-    return <p>Ошибка</p>;
+    return <p className="error">Ошибка</p>;
   }
 
   return (

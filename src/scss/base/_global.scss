@@ -39,3 +39,13 @@
     inset: 0;
   }
 }
+
+.error {
+  color: white;
+  text-decoration: underline 1px solid var(--main-color);
+  text-underline-offset: 2px;
+
+  &:has(+ .error) {
+    margin-bottom: 8px;
+  }
+}

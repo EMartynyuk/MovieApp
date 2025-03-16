@@ -295,6 +295,10 @@ nextjs-portal {
     //   max-height: 350px;
     // }
 
+    &:disabled {
+      box-shadow: 0 0 8px 1px tomato;
+    }
+
     &::placeholder {
       color: #666;
     }

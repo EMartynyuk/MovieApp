@@ -5,6 +5,7 @@ import debounce from "lodash.debounce";
 import { useFetchSearch } from "@/hooks/useFetchSearch";
 import { ChangeEvent, useCallback, useState } from "react";
 import { SearchResult } from "..";
+import { toast } from "sonner";
 
 export const Search = () => {
   const [inputValue, setInputValue] = useState("");
@@ -35,6 +36,10 @@ export const Search = () => {
     []
   );
 
+  if (error) {
+    toast.error("Произошла ошибка! Перезагрузите страницу.");
+  }
+
   return (
     <div className="search">
       <button className="search__btn" aria-label="Искать...">
@@ -51,6 +56,7 @@ export const Search = () => {
         onChange={handleInputChange}
         onFocus={handleVisibleResults}
         onBlur={handleUnvisible}
+        disabled={Boolean(error)}
       />
 
       {isVisible && data && (
