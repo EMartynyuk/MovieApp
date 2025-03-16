@@ -25,7 +25,7 @@ export const Slider = () => {
   }
 
   if (error) {
-    <p>Произошла ошибка</p>;
+    return <p>Произошла ошибка</p>;
   }
 
   return (
